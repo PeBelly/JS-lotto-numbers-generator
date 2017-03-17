@@ -31,17 +31,14 @@ function shuffle(reihen){
 			var	nummer	=	0
 			for(i = 1; i < wholenumber + 1; i++)
 				globe[i]	= i
-			for(i = 0; i < select; i++)
-		{
-
-		nummer	= Math.floor(Math.random() * (wholenumber - i) + 1)
-		number[i]	= globe[nummer]
-		if(globe.splice)
-			globe.splice(nummer, 1)
-		else
-		deselect(nummer)
-
-		}
+			for(i = 0; i < select; i++){
+				nummer	= Math.floor(Math.random() * (wholenumber - i) + 1)
+				number[i]	= globe[nummer]
+				if(globe.splice)
+					globe.splice(nummer, 1)
+				else
+				deselect(nummer)
+			}
 
 		number.sort(comparison)
 		}
